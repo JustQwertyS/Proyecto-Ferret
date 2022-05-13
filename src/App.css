@@ -1,0 +1,47 @@
+body {
+  background-color: #1835024d;
+  font-family: 'Cambria', sans-serif;
+  background-image: url('https://img.locationscout.net/images/2019-07/puponga-grasslands-ii-new-zealand-um4j_l.jpeg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding-top: 80px;
+  padding-bottom: 60px;
+}
+footer{ 
+  margin-top: 90%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-size: 13px;
+
+}
+
+.imgMobile{
+  width: 100%;
+}
+@media only screen and (max-width: 420px) {
+.footer-SM{
+ display: none;
+}
+.footer-md-text{
+  font-size: 8px;
+}
+body {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+.sectionA > a{
+  font-size: 0.7em;
+}
+.imgMobile{
+  width: 70%;
+}
+}
+
+@media only screen and (max-width: 540px) {
+  .footer-tablet{
+   display: none;
+  }
+}
