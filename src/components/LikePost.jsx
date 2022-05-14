@@ -3,7 +3,7 @@ import React from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth'
 import { auth, db} from '../firebaseConfig'
 import { arrayRemove, arrayUnion, doc, updateDoc } from 'firebase/firestore';
-
+/*Componente para el btn de Likes*/
 export default function LikePost({id,likes}) {
     const [user] = useAuthState(auth);
     const likesRef = doc(db,"Hurones",id);
@@ -27,6 +27,8 @@ export default function LikePost({id,likes}) {
             });
         }
     }
+
+    /*Color:?.inluir(si usuario) ? (mostrar like) o (no mostrar nada)*/
   return (
     <div>
         <i className={`fa fa-heart${!likes?.includes(user.uid)? "-o":""} "fa-lg"} btn`}

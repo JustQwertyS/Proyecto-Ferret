@@ -12,6 +12,8 @@ export default function Register() {
     const [user] = useAuthState(auth);
     let navigate = useNavigate();
 
+       
+    /*Register de auth con firebase*/
     const Registrar = async () => {
         try {
             await createUserWithEmailAndPassword(auth, email, password);

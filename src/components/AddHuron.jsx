@@ -6,6 +6,9 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { auth, db, storage } from '../firebaseConfig';
 
+    /*AddHuron*/
+    /*Componente que renderiza el formulario y trabaja con los datos ofrecidos*/
+
 export default function AddHuron() {
     const [user] = useAuthState(auth);
     const [formData, setFormData] = useState({
@@ -33,13 +36,15 @@ export default function AddHuron() {
             toast("Error Favor elegir un titulo mas corto", {type: "error"});
             return;
         }
-        
+
+         /*Cambiar Nombre Para evitar imagenes con mismo nombre*/
         const storageRef = ref(storage,`/images/${Date.now()}${formData.image.name}`);
 
         const uploadImage = uploadBytesResumable(storageRef, formData.image);
 
         uploadImage.on("state_changed",
         (snapshot)=>{
+             /*Recoge los bytes por los restantes divididos en 100 y convertidos a enteros con Math*/
             const progressPercent = Math.round((snapshot.bytesTransferred / snapshot.totalBytes) * 100
         );
             setProgress(progressPercent);
@@ -94,7 +99,8 @@ export default function AddHuron() {
         {/*image*/}
         <label htmlFor=''>Imagen</label>
         <input type="file" name="image" accept='image/*' className='form-control'  onChange={(e)=> CambiarImagen(e)}/>
-        
+       
+        {/*Barra de Progreso*/}
         {progress === 0 ? null :(
               <div className="progress">
               <div className="progress-bar progress-bar-striped mt-2" style={{width: `${progress}%`}}

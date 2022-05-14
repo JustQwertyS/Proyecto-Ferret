@@ -1,7 +1,7 @@
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import React, { useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, Navigate, Redirect, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { auth } from '../../firebaseConfig';
 
@@ -10,7 +10,8 @@ export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [user] = useAuthState(auth);
-
+    
+    /*Login de auth con firebase*/
     const Entrar= async ()=>{
         try {
             await signInWithEmailAndPassword(auth,email,password);

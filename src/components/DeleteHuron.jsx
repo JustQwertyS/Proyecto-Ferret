@@ -3,7 +3,10 @@ import { deleteObject, ref } from 'firebase/storage';
 import React from 'react'
 import { toast } from 'react-toastify';
 import { db, storage } from '../firebaseConfig'
-
+/*Boton de Borrar Huron o post, 
+    id: referencia de que post
+    imageUrl: referencia de la imagen a eliminar en storage
+*/
 export default function DeleteHuron({id,imageUrl}) {
     const eliminar= async()=>{
             if (window.confirm("¿Estas seguro que quieres eliminar este post?")) {

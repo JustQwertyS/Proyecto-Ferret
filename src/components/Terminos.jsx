@@ -1,6 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+/*Componente con texto
+nada complicado aqui
+*/
 export default function Terminos() {
   return (
     <div className='container' style={{marginTop:10, marginBottom:70}}>

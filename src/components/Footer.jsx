@@ -2,7 +2,7 @@ import React from 'react'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebookF, faGoogle, faTwitter, faInstagram, faLinkedin, faGithub} from "@fortawesome/free-brands-svg-icons";
 import { Link } from 'react-router-dom';
-
+/*Componente de Footer*/
 export default function Footer() {
   return (
     <footer className="bg-light text-center text-lg-start ">
